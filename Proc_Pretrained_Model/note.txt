@@ -1,0 +1,15 @@
+Learning Rate (LR): Learning rate determines the step size at which the model parameters are updated during training. A common starting point is around 1e-5 for fine-tuning BERT models, but it may need adjustment depending on the specific task and dataset. You can try values in the range of 1e-5 to 5e-5 and adjust based on validation performance.
+
+Batch Size: Batch size influences the number of samples seen by the model before an update to the parameters is made. Typically, batch sizes for fine-tuning BERT range from 16 to 64. Larger batch sizes can lead to faster training but may require more memory.
+
+Epochs: The number of epochs represents the number of times the entire training dataset is passed forward and backward through the neural network. Start with a smaller number of epochs (e.g., 3-5) and increase if needed based on validation performance.
+
+Warmup Steps: Warmup steps gradually increase the learning rate from very small values to the chosen learning rate. This is often set to a fraction (e.g., 0.1) of the total number of training steps.
+
+Weight Decay: Weight decay is a regularization technique that penalizes large weights in the model to prevent overfitting. Common values for weight decay are in the range of 0.01 to 0.001.
+
+Dropout: Dropout is another regularization technique where a fraction of neurons are randomly set to zero during training to prevent overfitting. A dropout rate of 0.1 is commonly used for BERT fine-tuning.
+
+Sequence Length: This parameter determines the maximum length of input sequences. It's usually set to a value that accommodates the majority of sequences in your dataset.
+
+Remember that these are just starting points, and fine-tuning might require experimentation with different values to find what works best for your specific task and dataset. Additionally, it's often beneficial to employ techniques like grid search or random search to systematically explore the parameter space.
