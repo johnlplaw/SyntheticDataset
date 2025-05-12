@@ -61,7 +61,7 @@ sql_stmt = """
             WHEN pseudo_label = 'Sad' THEN 5
             ELSE '-1'
         END AS pseudo_label  
-    from mydataset
+    from Synth_text
 """
 
 class SrcData:

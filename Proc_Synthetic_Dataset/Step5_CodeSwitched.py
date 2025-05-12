@@ -88,7 +88,7 @@ def execute():
     mycursor = conn.cursor()
     sql = ("select " +
            "id, cleanedTxt, translate_chn, translate_my, translate_tm " +
-           "from mydataset "
+           "from Synth_text "
            "where "
            " not ("
            " cleanedTxt = '' or cleanedTxt is null "
@@ -172,7 +172,7 @@ def execute():
 
     conn = sqlHelper.get_mysql_conn()
     mycursor = conn.cursor()
-    sql = ("UPDATE mydataset set" +
+    sql = ("UPDATE Synth_text set" +
            " cw_en_chn = lower(%s), cw_en_my = lower(%s), cw_en_tm = lower(%s)," +
            " cw_chn_en = lower(%s), cw_chn_my = lower(%s), cw_chn_tm = lower(%s)," +
            " cw_my_en = lower(%s), cw_my_chn = lower(%s), cw_my_tm = lower(%s)," +

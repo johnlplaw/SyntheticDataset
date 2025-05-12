@@ -45,7 +45,7 @@ class SrcData:
 conn = sqlHelper.get_mysql_conn()
 
 mycursor = conn.cursor()
-sql = "SELECT ID, label, oritxt, cleanedtxt from mydataset where cleanedtxt is null "
+sql = "SELECT ID, label, oritxt, cleanedtxt from Synth_text where cleanedtxt is null "
 mycursor.execute(sql)
 myresult = mycursor.fetchall()
 
@@ -66,7 +66,7 @@ print("Update into mysql - start")
 
 conn = sqlHelper.get_mysql_conn()
 mycursor = conn.cursor()
-sql = "UPDATE mydataset set cleanedtxt = %s where id = %s"
+sql = "UPDATE Synth_text set cleanedtxt = %s where id = %s"
 
 for txtdata in oritxt_list:
     val = (txtdata.cleanedTxt, txtdata.id)

@@ -1,4 +1,4 @@
-CREATE TABLE `mydataset` (
+CREATE TABLE `Synth_text` (
   `id` int NOT NULL AUTO_INCREMENT,
   `label` varchar(50) DEFAULT NULL,
   `std_label` varchar(50) DEFAULT NULL,

@@ -37,7 +37,7 @@ def execute():
     conn = sqlHelper.get_mysql_conn()
 
     mycursor = conn.cursor()
-    sql = "SELECT ID, cleanedTxt from mydataset where translate_chn is null and not cleanedTxt = '' limit 0, 1000"
+    sql = "SELECT ID, cleanedTxt from Synth_text where translate_chn is null and not cleanedTxt = '' limit 0, 1000"
     mycursor.execute(sql)
     myresult = mycursor.fetchall()
 
@@ -74,7 +74,7 @@ def execute():
 
     conn = sqlHelper.get_mysql_conn()
     mycursor = conn.cursor()
-    sql = "UPDATE mydataset set translate_chn = lower(%s), translate_my = lower(%s), translate_tm = lower(%s)here id = %s"
+    sql = "UPDATE Synth_text set translate_chn = lower(%s), translate_my = lower(%s), translate_tm = lower(%s)here id = %s"
 
     for txtdata in oritxt_list:
         val = (txtdata.translate_chn, txtdata.translate_my, txtdata.translate_tm, txtdata.id)

@@ -11,7 +11,7 @@ def Read_dataSet():
     try:
         conn = sqlHelper.get_mysql_conn()
         mycursor = conn.cursor()
-        sql = ("select id, cleanedtxt from mydataset where pseudo_label is null limit 10000")
+        sql = ("select id, cleanedtxt from Synth_text where pseudo_label is null limit 10000")
         mycursor.execute(sql)
         result = mycursor.fetchall()
 
@@ -39,7 +39,7 @@ def update_dataset_pseudolabel(textDataList):
     try:
         conn = sqlHelper.get_mysql_conn()
         mycursor = conn.cursor()
-        update_sql = "update mydataset set pseudo_label = %s where id = %s "
+        update_sql = "update Synth_text set pseudo_label = %s where id = %s "
 
         values = []
 

@@ -151,7 +151,7 @@ print("Insert into mysql - start")
 
 conn = sqlHelper.get_mysql_conn()
 mycursor = conn.cursor()
-sql = "INSERT INTO mydataset2 (label, oritxt, cleanedtxt) VALUES (%s, %s, %s)"
+sql = "INSERT INTO Synth_text (label, oritxt, cleanedtxt) VALUES (%s, %s, %s)"
 
 for txtdata in selectedList:
     val = ( txtdata.labelTxt, txtdata.oriTxt, txtdata.cleanedTxt)

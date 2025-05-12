@@ -3,9 +3,20 @@ This project will develop a classification model to classify a text into emotion
 The structure of the coding is shown below:
 
 data: The folder to store the data
-----------------------------------------------------------
+==========================================================
 - SourceDataSets.xlsx - the file keeps the source data from the public repository
 
+
+Database scripts
+==========================================================
+Step1_create_schema.sql :- Create the schema of the database
+Step2_create_Synth_text_table.sql :- Create the Synth text table
+Step3_create_similarity_st.sql :- Create a table to keep validation of the synth texts
+Step4_create_model_training.sql :- Create a table to keep the output of the
+
+
+Python Script:
+==========================================================
 Common: Library (Folder: commons)
 ----------------------------------------------------------
 - lang: Libraries for common functions
