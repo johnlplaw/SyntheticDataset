@@ -6,6 +6,6 @@ def get_mysql_conn():
         host="localhost",
         user="root",
         password="myroot",
-        database="myresearch"
+        database="syntheticDS"
     )
     return mydb
