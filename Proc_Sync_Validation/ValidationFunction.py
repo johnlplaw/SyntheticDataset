@@ -45,7 +45,7 @@ def get_Syn_Dataset(targetTable, recordline):
             cw_tm_en, 
             cw_tm_chn, 
             cw_tm_my
-        from mydataset 
+        from Synth_text 
     """
 
     Sub_Query = " where length(cleanedtxt) > 0 and id not in (select id from " + targetTable + ") " + recordline + ";"
