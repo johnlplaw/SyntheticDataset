@@ -2,6 +2,18 @@ import mysql
 import commons.mysql.mysqlHelper as sqlHelper
 import commons.emotion.identifyEmotion as emo
 
+"""
+By default the text2emotion will get error, AttributeError: module 'emoji' has no attribute 'UNICODE_EMOJI'
+By referring to https://www.datasciencelearner.com/python-exceptions/attributeerror/attributeerror-module-emoji-has-no-attribute-unicode-emoji-solved/
+
+Update the library:
+pip uninstall emoji
+pip install emoji==1.7.0
+
+If there is error require download the nltk_date, just run the importNLTK.py
+
+"""
+
 class MyDataSet:
     id = ""
     eng_text = ""
