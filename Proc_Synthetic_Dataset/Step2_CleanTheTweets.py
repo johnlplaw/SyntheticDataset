@@ -76,37 +76,3 @@ conn.commit()
 print(mycursor.rowcount, "record updated.")
 
 print("Update into mysql - end")
-
-# Backup:
-# ---------------
-# wb = openpyxl.load_workbook("./data/SourceDataSets.xlsx")
-# sheets = wb.sheetnames
-
-
-# ws = wb[sheets[3]]
-# column1 = ws['A']
-# column2 = ws['B']
-# column3 = ws['C']
-
-
-# x = ""
-# i = 0
-# for row in range(1, ws.max_row):
-# for row in range(11, 1000):
-#     labelTxt = str(column1[row].value)
-#     oriTxt = str(column3[row].value)
-#     cleanedTxt = str(column2[row].value)
-#     mycleanTxt = str(light_clean(oriTxt))
-#
-#     print("orig: " + oriTxt)
-#     print("exam: " + cleanedTxt)
-#     print("____: " + mycleanTxt)
-#     print("========================")
-#     x = x + "\norig: " + oriTxt
-#     x = x + "\nexam: " + cleanedTxt
-#     x = x + "\n____: " + mycleanTxt
-#     x = x + "\n-------------"
-#
-# with open("new.txt","w") as f:
-#   f.writelines(x)
-#   f.close()
