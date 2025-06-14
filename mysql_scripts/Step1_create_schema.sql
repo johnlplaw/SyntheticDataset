@@ -1,1 +1,1 @@
-CREATE SCHEMA `syntheticDS` ;
+CREATE SCHEMA `syntheticdataset` ;
